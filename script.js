@@ -1,4 +1,18 @@
 // Assignment code here
+var generateBtn = document.querySelector("generate");
+
+function randomInt(min, max) {
+if (!max) {
+max=min
+min=0
+}
+var rand = Math.random()
+return Math.floor(min*(1 - rand) +rand*max)
+}
+function getRandomitem(list) {
+return list [randomInt(list.length)]
+}
+
 function generatePassword() {
 // in order to generate password, must include special characters"
 var specialcharacters= [' ', '!', '"', '#', '$', '%', '&', "'",'(', ')', '*', '+',',', '-', '.', '/', ':', ';', '<', '=', '<', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~', '"' ] ;
@@ -12,9 +26,28 @@ var uppercaseletters= ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L
 // in order to generate password, must include numbers"
 var numbers= ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-console.log(specialcharacters,lowercaseletters,uppercaseletters,numbers)
+var optionscart = []
 
-var generateBtn = document.querySelector("generate")
+// if statement to have special characters in user's password
+if (userwantsspecialcharacters === true) {
+  optionscart.push(specialcharacters)
+}
+
+// if statement to have lowercase letters in user's password
+if (userwantslowercaseletters === true) {
+  optionscart.push(lowercaseletters)
+}
+
+// if statement to have uppercase letters in user's password
+if (userwantsuppercaseletters === true) {
+  optionscart.push(uppercaseletters)
+}
+
+// if statement to have numbers in user's password
+if (userwantsnumbers === true) {
+  optionscart.push(numbers)
+}
+
 while (true) {
 // give user the option on how many characters they want in their password"
 var userinput= window.prompt("Hello... How long do you want your password to be?")
@@ -35,10 +68,10 @@ break
 }
 
 // give user the option to include either special characters, numbers, uppercase, and lower case letters"
-var userwantsspecialcharacters = window.confirm("Do You want to include symbols in your password?")
-var userwantslowercaseletters = window.confirm("Do You want to include lowercase letters in your password?")
-var userwantsuppercaseletters = window.confirm("Do You want to include uppercase letters in your password?")
-var userwantsnumbers = window.confirm("Do You want to include numbers in your password?")
+var userwantsspecialcharacters = window.confirm ("Do you want to include symbols in your password?")
+var userwantslowercaseletters = window.confirm("Do you want to include lowercase letters in your password?")
+var userwantsuppercaseletters = window.confirm("Do you want to include uppercase letters in your password?")
+var userwantsnumbers = window.confirm("Do you want to include numbers in your password?")
 }
 
 
