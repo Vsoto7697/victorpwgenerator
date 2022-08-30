@@ -22,15 +22,25 @@ var userinput= window.prompt("Hello... How long do you want your password to be?
 if (userinput === null) {
 return
 }
-var paswordLength =parseInt (userinput)
+var passwordLength =parseInt (userinput)
 
 // break all invalid password lengths"
 if (isNaN(passwordLength)) {
-window.alert("Please try againn")
+window.alert("Please try again, the input you entered is not a number!")
+} else if (passwordLength < 8 || passwordLength > 128) {
+window.alert ("Please try again, the password length you entered must be between 8 and 128 characters")
+} else {
+break
+}
 }
 
+// give user the option to include either special characters, numbers, uppercase, and lower case letters"
+var userwantsspecialcharacters = window.confirm("Do You want to include symbols in your password?")
+var userwantslowercaseletters = window.confirm("Do You want to include lowercase letters in your password?")
+var userwantsuppercaseletters = window.confirm("Do You want to include uppercase letters in your password?")
+var userwantsnumbers = window.confirm("Do You want to include numbers in your password?")
 }
-}
+
 
 
 
