@@ -29,14 +29,6 @@ function generatePassword() {
     alert("Your password will NOT include lowercase letters.");
   }
 
-  // include lowercase letters prompt
-  includeLowercase = confirm("Do you want to include lowercase letters in your password?");
-  if (includeLowercase) {
-    alert("Your password will include lowercase letters.");
-  }
-  else {
-    alert("Your password will NOT include lowercase letters."); 
-  }
 
   return finalPassword;
 }
