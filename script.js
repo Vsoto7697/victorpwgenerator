@@ -20,13 +20,31 @@ function generatePassword() {
     alert("Thank you for your input, your password will be " + numberofCharacters + " characters long.");
   }
 
+  // include numbers prompt
+  includeNumbers = confirm("Do you want to include numbers in your password?");
+  if (includeNumbers) {
+    alert("Your password will include numbers.");
+  }
+  else {
+    alert("Your password will NOT include numbers.");
+  }
+
   // include lowercase letters prompt
   includeLowercase = confirm("Do you want to include lowercase letters in your password?");
   if (includeLowercase) {
-    var turnToLowercase = alert("Your password will include lowercase letters.");
+    alert("Your password will include lowercase letters.");
   }
   else {
     alert("Your password will NOT include lowercase letters.");
+  }
+
+  // include uppercase letters prompt
+  includeUppercase = confirm("Do you want to include uppercase letters in your password?");
+  if (includeUppercase) {
+    alert("Your password will include uppercase letters.");
+  }
+  else {
+    alert("Your password will NOT include uppercase letters.");
   }
 
 
