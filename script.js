@@ -47,6 +47,15 @@ function generatePassword() {
     alert("Your password will NOT include uppercase letters.");
   }
 
+  // include special characters prompt
+  includeSpecialcharacters = confirm("Do you want to include special characters in your password?");
+  if (includeSpecialcharacters) {
+    alert("Your password will include special characters.");
+  }
+  else {
+    alert("Your password will NOT include special characters.");
+  }
+
 
   return finalPassword;
 }
