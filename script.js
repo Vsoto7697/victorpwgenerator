@@ -23,14 +23,26 @@ function generatePassword() {
   // include lowercase letters prompt
   includeLowercase = confirm("Do you want to include lowercase letters in your password?");
   if (includeLowercase) {
-    var selectLowercase = alert("Your password will include lowercase letters.");
+    var turnToLowercase = alert("Your password will include lowercase letters.");
   }
   else {
     alert("Your password will NOT include lowercase letters.");
   }
 
+  // include lowercase letters prompt
+  includeLowercase = confirm("Do you want to include lowercase letters in your password?");
+  if (includeLowercase) {
+    alert("Your password will include lowercase letters.");
+  }
+  else {
+    alert("Your password will NOT include lowercase letters."); 
+  }
+
   return finalPassword;
-  
+}
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
