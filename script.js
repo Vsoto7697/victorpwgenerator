@@ -6,6 +6,20 @@ function generatePassword() {
   var uppercaseletters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   var specialCharacters = ['@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
   var possibleCharacters = [];
+
+// input and prompt functions 
+
+// number of characters prompt
+  numberofCharacters = prompt("How long do you want your password to be? Password length must at least be 8 characters and no more than 128 characters");
+  if (numberofCharacters < 8 || numberofCharacters > 128) {
+    return "The amount of characters you enter is not valid; please try again. Hint: password length must at least be 8 characters and no more than 128 characters";
+  } else if (isNaN(numberofCharacters)) {
+    numberofCharacters = prompt("This is not a valid input. Please try again.");
+  }
+  else {
+    alert("Thank you for your input, your password will be " + numberofCharacters + " characters long.");
+  }
+
   return finalPassword;
 }
 
