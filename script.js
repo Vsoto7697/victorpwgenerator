@@ -20,11 +20,17 @@ function generatePassword() {
     alert("Thank you for your input, your password will be " + numberofCharacters + " characters long.");
   }
 
-  return finalPassword;
-}
+  // include lowercase letters prompt
+  includeLowercase = confirm("Do you want to include lowercase letters in your password?");
+  if (includeLowercase) {
+    var selectLowercase = alert("Your password will include lowercase letters.");
+  }
+  else {
+    alert("Your password will NOT include lowercase letters.");
+  }
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+  return finalPassword;
+  
 
 // Write password to the #password input
 function writePassword() {
