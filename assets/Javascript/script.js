@@ -59,6 +59,19 @@ function generatePassword() {
     return "You have not selected any character type, please try again."
   }
 
+  // program conditional statement that links function to determine password based on user input
+  if (includeNumbers) {
+    possibleCharacters = possibleCharacters.concat(numbers);
+  }
+  if (includeLowercase) {
+    possibleCharacters = possibleCharacters.concat(lowercaseletters);
+  }
+  if (includeUppercase) {
+    possibleCharacters = possibleCharacters.concat(uppercaseletters);
+  }
+  if (includeSpecialcharacters) {
+    possibleCharacters = possibleCharacters.concat(specialCharacters);
+  }
  
 
   return finalPassword;
