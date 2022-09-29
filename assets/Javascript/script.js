@@ -7,20 +7,18 @@ function generatePassword() {
   var specialCharacters = ['@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
   var possibleCharacters = [];
 
-// input and prompt functions 
+// section of different prompts that user interacts with 
 
-// number of characters prompt
+// number of characters prompt that gives user option to determine how many characters they want in their password that meets specified criteria 
   numberofCharacters = prompt("How long do you want your password to be? Password length must at least be 8 characters and no more than 128 characters");
   if (numberofCharacters < 8 || numberofCharacters > 128) {
     return "The amount of characters you enter is not valid; please try again. Hint: password length must at least be 8 characters and no more than 128 characters";
   } else if (isNaN(numberofCharacters)) {
     numberofCharacters = prompt("This is not a valid input. Please try again.");
   }
-  else {
-    alert("Thank you for your input, your password will be " + numberofCharacters + " characters long.");
-  }
 
-  // include numbers prompt
+
+  // include numbers prompt to give user option to include numbers in their password
   includeNumbers = confirm("Do you want to include numbers in your password?");
   if (includeNumbers) {
     alert("Your password will include numbers.");
@@ -29,7 +27,7 @@ function generatePassword() {
     alert("Your password will NOT include numbers.");
   }
 
-  // include lowercase letters prompt
+  // include lowercase letters prompt to give user option to include lowercase letters in their password
   includeLowercase = confirm("Do you want to include lowercase letters in your password?");
   if (includeLowercase) {
     alert("Your password will include lowercase letters.");
@@ -38,7 +36,7 @@ function generatePassword() {
     alert("Your password will NOT include lowercase letters.");
   }
 
-  // include uppercase letters prompt
+  // include uppercase letters prompt to give user option to include uppercase letters in their password
   includeUppercase = confirm("Do you want to include uppercase letters in your password?");
   if (includeUppercase) {
     alert("Your password will include uppercase letters.");
@@ -47,7 +45,7 @@ function generatePassword() {
     alert("Your password will NOT include uppercase letters.");
   }
 
-  // include special characters prompt
+  // include special characters prompt to give user option to include special characters in their password
   includeSpecialcharacters = confirm("Do you want to include special characters in your password?");
   if (includeSpecialcharacters) {
     alert("Your password will include special characters.");
@@ -56,6 +54,12 @@ function generatePassword() {
     alert("Your password will NOT include special characters.");
   }
 
+   // prompt user an error message if user has not selected 
+   if (includeNumbers === false && includeLowercase === false && includeUppercase === false && includeSpecialcharacters === false) {
+    return "You have not selected any character type, please try again."
+  }
+
+ 
 
   return finalPassword;
 }
