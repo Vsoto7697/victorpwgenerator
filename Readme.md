@@ -1,7 +1,7 @@
 # Random password generator javascript
 
 ## Description
-This password generator is a software tool that creates randomly generated passwords for users utlizing javscript. The purpose for this password generator is to create stronger passwords and provide greater security for the user by giving the user a specific criteria such as the inclusions of numbers, 
+This password generator is a software tool that creates randomly generated passwords for users utlizing javscript. The purpose for this password generator is to create stronger passwords and provide greater security for the user by giving the user a specific criteria such as the inclusions of numbers, lowercase letters, uppercase letters and symbols.
 
 ## Installation
 
