@@ -14,7 +14,7 @@ Screenshot of website
 
 ![Screenshot](assets/Images/Screenshotofpasswordgenerator.png)
 
-To visit please click on link [link](https://vsoto7697.github.io/victorspasswordgenerator)
+To visit please click on link [link](https://vsoto7697.github.io/vpwgenerator/)
 
 ## Challenges
 One thing I had trouble on was setting my variables, I tried classifying each variable but I kept recieving an error message after prompts were selected. I also struggled with deploying my url and using the functionality of pushing and pulling to and from github. I believe that my biggest challenge was programming the conditional statement that links function that determined the user's password based on their input; I wasn't able to properly link each statement to the variable and kept getting a syntax error on my console. 
